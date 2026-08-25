@@ -21,3 +21,10 @@ questions = [
               "options" : ["Random Access Memory", "Read Access Memory","Rapid Access Machine", "Random Application Memory"],
               "answer"  : "Random Access Memory"}
 ]
+
+
+for quiz in questions:
+    print(quiz["question"])
+
+    for option in quiz["options"]:
+        print(option)
