@@ -26,5 +26,8 @@ questions = [
 for quiz in questions:
     print(quiz["question"])
 
-    for option in quiz["options"]:
-        print(option)
+    for index, option in enumerate(quiz["options"] , start=1):
+        print(f"{index}. {option}")
+
+    user_input = input("Your Answer:") 
+    print()        
