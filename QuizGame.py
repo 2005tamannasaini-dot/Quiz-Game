@@ -29,5 +29,15 @@ for quiz in questions:
     for index, option in enumerate(quiz["options"] , start=1):
         print(f"{index}. {option}")
 
-    user_input = input("Your Answer:") 
+    user_input = input("Your Answer:")
+
+    select_option = quiz["options"][int(user_input) - 1] 
+
+    if select_option == quiz["answer"]:
+        print (" Correct Anwere. ✅!")
+
+    else:
+        print(" Your Answer is wrong. ❌")    
+        print("Correct Answer:",quiz["answer"])
+
     print()        
