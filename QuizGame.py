@@ -22,7 +22,7 @@ questions = [
               "answer"  : "Random Access Memory"}
 ]
 
-
+score = 0
 for quiz in questions:
     print(quiz["question"])
 
@@ -35,6 +35,7 @@ for quiz in questions:
 
     if select_option == quiz["answer"]:
         print (" Correct Anwere. ✅!")
+        score += 1
 
     else:
         print(" Your Answer is wrong. ❌")    
