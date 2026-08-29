@@ -41,4 +41,8 @@ for quiz in questions:
         print(" Your Answer is wrong. ❌")    
         print("Correct Answer:",quiz["answer"])
 
-    print()        
+    print()    
+
+print("Quiz Complete!")        
+print("Your final score:", score)
+print("Total questions:", len(questions))
