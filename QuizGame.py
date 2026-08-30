@@ -46,3 +46,6 @@ for quiz in questions:
 print("Quiz Complete!")        
 print("Your final score:", score)
 print("Total questions:", len(questions))
+
+percentage = (score / len(questions) * 100)
+print(f"Your percentage:, {percentage:.0f}% ")
