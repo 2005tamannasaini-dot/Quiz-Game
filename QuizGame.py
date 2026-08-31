@@ -29,19 +29,24 @@ for quiz in questions:
     for index, option in enumerate(quiz["options"] , start=1):
         print(f"{index}. {option}")
 
-    user_input = input("Your Answer:")
+    while True:
+        user_input = input("Your Answer:")
 
-    select_option = quiz["options"][int(user_input) - 1] 
+        if user_input in ["1", "2", "3", "4"]:
+            select_option = quiz["options"][int(user_input) - 1] 
 
-    if select_option == quiz["answer"]:
-        print (" Correct Anwere. ✅!")
-        score += 1
+            if select_option == quiz["answer"]:
+                print (" Correct Anwere. ✅!")
+                score += 1
 
-    else:
-        print(" Your Answer is wrong. ❌")    
-        print("Correct Answer:",quiz["answer"])
+            else:
+                print(" Your Answer is wrong. ❌")    
+                print("Correct Answer:",quiz["answer"])
+            break
 
-    print()    
+        else:
+            print("Please! choose the Input 1 to 4.")
+        print()    
 
 print("Quiz Complete!")        
 print("Your final score:", score)
