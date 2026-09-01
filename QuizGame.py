@@ -23,7 +23,8 @@ questions = [
 ]
 
 score = 0
-for quiz in questions:
+for number, quiz in enumerate(questions, start=1):
+    print(f"\nQuestion {number}/{len(questions)}")
     print(quiz["question"])
 
     for index, option in enumerate(quiz["options"] , start=1):
