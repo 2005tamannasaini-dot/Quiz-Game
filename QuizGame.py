@@ -54,4 +54,10 @@ print("Your final score:", score)
 print("Total questions:", len(questions))
 
 percentage = (score / len(questions) * 100)
-print(f"Your percentage:, {percentage:.0f}% ")
+if percentage >= 80:
+    print("Excellent! 🎉")
+elif percentage >= 50:
+    print("Good job! 👍")
+else:
+    print("Keep practicing! 💪")
+print(f"Your percentage: {percentage:.0f}% ")
