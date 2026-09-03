@@ -22,42 +22,57 @@ questions = [
               "answer"  : "Random Access Memory"}
 ]
 
-score = 0
-for number, quiz in enumerate(questions, start=1):
-    print(f"\nQuestion {number}/{len(questions)}")
-    print(quiz["question"])
+while True:
+    score = 0
 
-    for index, option in enumerate(quiz["options"] , start=1):
-        print(f"{index}. {option}")
+    for number, quiz in enumerate(questions, start=1):
+        print(f"\nQuestion {number}/{len(questions)}")
+        print(quiz["question"])
 
-    while True:
-        user_input = input("Your Answer:")
+        for index, option in enumerate(quiz["options"] , start=1):
+            print(f"{index}. {option}")
 
-        if user_input in ["1", "2", "3", "4"]:
-            select_option = quiz["options"][int(user_input) - 1] 
+        while True:
+            user_input = input("Your Answer:")
 
-            if select_option == quiz["answer"]:
-                print (" Correct Anwere. ✅!")
-                score += 1
+            if user_input in ["1", "2", "3", "4"]:
+                select_option = quiz["options"][int(user_input) - 1] 
+
+                if select_option == quiz["answer"]:
+                    print (" Correct Anwere. ✅!")
+                    score += 1
+
+                else:
+                    print(" Your Answer is wrong. ❌")    
+                    print("Correct Answer:",quiz["answer"])
+                break
 
             else:
-                print(" Your Answer is wrong. ❌")    
-                print("Correct Answer:",quiz["answer"])
+                print("Please! choose the Input 1 to 4.")
+            print()    
+
+    print("Quiz Complete!")        
+    print("Your final score:", score)
+    print("Total questions:", len(questions))
+
+    percentage = (score / len(questions) * 100)
+    if percentage >= 80:
+        print("Excellent! 🎉")
+    elif percentage >= 50:
+        print("Good job! 👍")
+    else:
+        print("Keep practicing! 💪")
+    print(f"Your percentage: {percentage:.0f}% ")
+
+    while True:
+        choose = input("continue? (yes/no):").lower()
+
+        if choose == "yes":
             break
 
+        elif choose == "no":
+                print("Quiz Game closed. ")
+                exit()
+                
         else:
-            print("Please! choose the Input 1 to 4.")
-        print()    
-
-print("Quiz Complete!")        
-print("Your final score:", score)
-print("Total questions:", len(questions))
-
-percentage = (score / len(questions) * 100)
-if percentage >= 80:
-    print("Excellent! 🎉")
-elif percentage >= 50:
-    print("Good job! 👍")
-else:
-    print("Keep practicing! 💪")
-print(f"Your percentage: {percentage:.0f}% ")
+            print(" Please! choose Input Yes or No")        
