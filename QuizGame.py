@@ -22,15 +22,23 @@ questions = [
               "answer"  : "Random Access Memory"}
 ]
 
+attempt = 0
+
 while True:
+
+    attempt += 1
     score = 0
 
+    print(f"\n===== Attempt Quiz {attempt} =====")
+
     for number, quiz in enumerate(questions, start=1):
+        
         print(f"\nQuestion {number}/{len(questions)}")
         print(quiz["question"])
 
         for index, option in enumerate(quiz["options"] , start=1):
             print(f"{index}. {option}")
+           
 
         while True:
             user_input = input("Your Answer:")
