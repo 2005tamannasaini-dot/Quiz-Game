@@ -1,5 +1,6 @@
 # Quiz Game Project
 
+import random
 questions = [
             {"question" : "Python kis type ki language hai?",
              "options" : ["Programming language", "Markup language", "Database", "Operating system"] ,
@@ -30,6 +31,8 @@ while True:
     score = 0
 
     print(f"\n===== Attempt Quiz {attempt} =====")
+
+    random.shuffle(questions)
 
     for number, quiz in enumerate(questions, start=1):
         
