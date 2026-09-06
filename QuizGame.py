@@ -39,6 +39,8 @@ while True:
         print(f"\nQuestion {number}/{len(questions)}")
         print(quiz["question"])
 
+        random.shuffle(quiz["options"])
+
         for index, option in enumerate(quiz["options"] , start=1):
             print(f"{index}. {option}")
            
