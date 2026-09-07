@@ -4,23 +4,29 @@ import random
 questions = [
             {"question" : "Python kis type ki language hai?",
              "options" : ["Programming language", "Markup language", "Database", "Operating system"] ,
-             "answer"  : "Programming language"},
+             "answer"  : "Programming language",
+             "explanation": "Python ek high-level programming language hai."},
 
             {"question" : "Python me function banane ke liye kaunsa keyword use hota hai?",
              "options" : ["func", "def", "function", "define"],
-             "answer"  : "def"},
+             "answer"  : "def",
+             "explanation": "Python me function define karne ke liye def keyword use hota hai."
+},
 
              {"question" : "Python me list kaunse brackets me banti hai?",
               "options" : ["()", "{}", "[]", "<>"],
-              "answer"  : "[]"},
+              "answer"  : "[]",
+              "explanation": "Python me list square brackets [] ke andar banayi jati hai."},
 
              {"question" : "10 + 5 kitna hota hai?",
               "options" : ["20", "10", "25", "15"],
-              "answer"  : "15"},
+              "answer"  : "15",
+              "explanation": "10 me 5 add karne par result 15 hota hai."},
 
              {"question" : "Computer me RAM ka full form kya hai?",
               "options" : ["Random Access Memory", "Read Access Memory","Rapid Access Machine", "Random Application Memory"],
-              "answer"  : "Random Access Memory"}
+              "answer"  : "Random Access Memory",
+              "explanation": "RAM ka full form Random Access Memory hai. Ye computer ki temporary memory hoti hai."}
 ]
 
 attempt = 0
@@ -53,11 +59,13 @@ while True:
 
                 if select_option == quiz["answer"]:
                     print (" Correct Anwere. ✅!")
+                    print("Explanation:", quiz["explanation"])
                     score += 1
 
                 else:
                     print(" Your Answer is wrong. ❌")    
                     print("Correct Answer:",quiz["answer"])
+                    print("Explanation:", quiz["explanation"])
                 break
 
             else:
