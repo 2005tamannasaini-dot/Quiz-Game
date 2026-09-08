@@ -35,6 +35,8 @@ while True:
 
     attempt += 1
     score = 0
+    correct_answers = 0
+    wrong_answers = 0
 
     print(f"\n===== Attempt Quiz {attempt} =====")
 
@@ -61,11 +63,13 @@ while True:
                     print (" Correct Anwere. ✅!")
                     print("Explanation:", quiz["explanation"])
                     score += 1
+                    correct_answers += 1
 
                 else:
                     print(" Your Answer is wrong. ❌")    
                     print("Correct Answer:",quiz["answer"])
                     print("Explanation:", quiz["explanation"])
+                    wrong_answers += 1
                 break
 
             else:
@@ -75,6 +79,8 @@ while True:
     print("Quiz Complete!")        
     print("Your final score:", score)
     print("Total questions:", len(questions))
+    print("Correct Question:", correct_answers)
+    print("Wrong Question:", wrong_answers )
 
     percentage = (score / len(questions) * 100)
     if percentage >= 80:
