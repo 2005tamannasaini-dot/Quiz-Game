@@ -91,6 +91,9 @@ while True:
         print("Keep practicing! 💪")
     print(f"Your percentage: {percentage:.0f}% ")
 
+    correct_rate = (correct_answers / len(questions)*100)
+    print(f"correct answer rate: {correct_rate:.0f}%")
+
     while True:
         choose = input("continue? (yes/no):").lower()
 
