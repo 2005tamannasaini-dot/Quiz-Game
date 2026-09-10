@@ -5,28 +5,32 @@ questions = [
             {"question" : "Python kis type ki language hai?",
              "options" : ["Programming language", "Markup language", "Database", "Operating system"] ,
              "answer"  : "Programming language",
-             "explanation": "Python ek high-level programming language hai."},
+             "explanation": "Python ek high-level programming language hai.",
+             "difficulty": "Easy"},
 
             {"question" : "Python me function banane ke liye kaunsa keyword use hota hai?",
              "options" : ["func", "def", "function", "define"],
              "answer"  : "def",
-             "explanation": "Python me function define karne ke liye def keyword use hota hai."
-},
+             "explanation": "Python me function define karne ke liye def keyword use hota hai.",
+             "difficulty": "Easy"},
 
              {"question" : "Python me list kaunse brackets me banti hai?",
               "options" : ["()", "{}", "[]", "<>"],
               "answer"  : "[]",
-              "explanation": "Python me list square brackets [] ke andar banayi jati hai."},
+              "explanation": "Python me list square brackets [] ke andar banayi jati hai.",
+              "difficulty": "Easy"},
 
              {"question" : "10 + 5 kitna hota hai?",
               "options" : ["20", "10", "25", "15"],
               "answer"  : "15",
-              "explanation": "10 me 5 add karne par result 15 hota hai."},
+              "explanation": "10 me 5 add karne par result 15 hota hai.",
+              "difficulty": "Easy"},
 
              {"question" : "Computer me RAM ka full form kya hai?",
               "options" : ["Random Access Memory", "Read Access Memory","Rapid Access Machine", "Random Application Memory"],
               "answer"  : "Random Access Memory",
-              "explanation": "RAM ka full form Random Access Memory hai. Ye computer ki temporary memory hoti hai."}
+              "explanation": "RAM ka full form Random Access Memory hai. Ye computer ki temporary memory hoti hai.",
+              "difficulty": "Easy"}
 ]
 
 attempt = 0
@@ -45,8 +49,9 @@ while True:
     for number, quiz in enumerate(questions, start=1):
         
         print(f"\nQuestion {number}/{len(questions)}")
+        print("difficulty:", quiz["difficulty"])
         print(quiz["question"])
-
+        
         random.shuffle(quiz["options"])
 
         for index, option in enumerate(quiz["options"] , start=1):
