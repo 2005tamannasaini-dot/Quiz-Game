@@ -99,6 +99,12 @@ while True:
     correct_rate = (correct_answers / len(questions)*100)
     print(f"correct answer rate: {correct_rate:.0f}%")
 
+    print("\n===== Score Summary =====")
+    print(f"Score: {score}/{len(questions)}")
+    print(f"Correct Answers: {correct_answers}")
+    print(f"Wrong Answers: {wrong_answers}")
+    print(f"Percentage: {percentage:.0f}%")
+
     while True:
         choose = input("continue? (yes/no):").lower()
 
