@@ -82,11 +82,7 @@ while True:
             print()    
 
     print("Quiz Complete!")        
-    print("Your final score:", score)
-    print("Total questions:", len(questions))
-    print("Correct Question:", correct_answers)
-    print("Wrong Question:", wrong_answers )
-
+    
     percentage = (score / len(questions) * 100)
     if percentage >= 80:
         print("Excellent! 🎉")
@@ -94,11 +90,7 @@ while True:
         print("Good job! 👍")
     else:
         print("Keep practicing! 💪")
-    print(f"Your percentage: {percentage:.0f}% ")
-
-    correct_rate = (correct_answers / len(questions)*100)
-    print(f"correct answer rate: {correct_rate:.0f}%")
-
+   
     print("\n===== Score Summary =====")
     print(f"Score: {score}/{len(questions)}")
     print(f"Correct Answers: {correct_answers}")
