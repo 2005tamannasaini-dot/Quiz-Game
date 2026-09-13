@@ -101,11 +101,12 @@ while True:
         choose = input("continue? (yes/no):").lower()
 
         if choose == "yes":
+            print("\nStarting a new quiz attempt... 🔄")
             break
 
         elif choose == "no":
-                print("Quiz Game closed. ")
-                exit()
+            print("Quiz Game closed. ")
+            exit()
                 
         else:
             print(" Please! choose Input Yes or No")        
