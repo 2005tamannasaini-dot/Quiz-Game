@@ -59,27 +59,31 @@ while True:
            
 
         while True:
-            user_input = input("Your Answer:")
+            try:
+                user_input = input("Your Answer:")
 
-            if user_input in ["1", "2", "3", "4"]:
-                select_option = quiz["options"][int(user_input) - 1] 
+                if user_input in ["1", "2", "3", "4"]:
+                    select_option = quiz["options"][int(user_input) - 1] 
 
-                if select_option == quiz["answer"]:
-                    print (" Correct Anwere. ✅!")
-                    print("Explanation:", quiz["explanation"])
-                    score += 1
-                    correct_answers += 1
+                    if select_option == quiz["answer"]:
+                        print (" Correct Anwere. ✅!")
+                        print("Explanation:", quiz["explanation"])
+                        score += 1
+                        correct_answers += 1
+
+                    else:
+                        print(" Your Answer is wrong. ❌")    
+                        print("Correct Answer:",quiz["answer"])
+                        print("Explanation:", quiz["explanation"])
+                        wrong_answers += 1
+                    break
 
                 else:
-                    print(" Your Answer is wrong. ❌")    
-                    print("Correct Answer:",quiz["answer"])
-                    print("Explanation:", quiz["explanation"])
-                    wrong_answers += 1
-                break
-
-            else:
-                print("Please! choose the Input 1 to 4.")
-            print()    
+                    print("Please! choose the Input 1 to 4.")
+                print()  
+            except ValueError:
+                print("Please enter a number.")        
+             
 
     print("Quiz Complete!")        
     
