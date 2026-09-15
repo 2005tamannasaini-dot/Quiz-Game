@@ -33,6 +33,7 @@ questions = [
               "difficulty": "Easy"}
 ]
 
+MAX_SCORE = len(questions)
 attempt = 0
 
 while True:
@@ -48,7 +49,7 @@ while True:
 
     for number, quiz in enumerate(questions, start=1):
         
-        print(f"\nQuestion {number}/{len(questions)}")
+        print(f"\nQuestion {number}/{MAX_SCORE}")
         print("difficulty:", quiz["difficulty"])
         print(quiz["question"])
         
@@ -87,7 +88,7 @@ while True:
 
     print("Quiz Complete!")        
     
-    percentage = (score / len(questions) * 100)
+    percentage = (score / MAX_SCORE * 100)
     if percentage >= 80:
         print("Excellent! 🎉")
     elif percentage >= 50:
@@ -96,7 +97,7 @@ while True:
         print("Keep practicing! 💪")
    
     print("\n===== Score Summary =====")
-    print(f"Score: {score}/{len(questions)}")
+    print(f"Score: {score}/{MAX_SCORE}")
     print(f"Correct Answers: {correct_answers}")
     print(f"Wrong Answers: {wrong_answers}")
     print(f"Percentage: {percentage:.0f}%")
