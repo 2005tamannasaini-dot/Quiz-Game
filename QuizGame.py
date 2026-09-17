@@ -97,6 +97,7 @@ while True:
         print("Keep practicing! 💪")
    
     print("\n===== Score Summary =====")
+    print(f"Attempt Number: {attempt}")
     print(f"Score: {score}/{total_questions}")
     print(f"Correct Answers: {correct_answers}")
     print(f"Wrong Answers: {wrong_answers}")
