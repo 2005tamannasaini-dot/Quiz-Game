@@ -35,6 +35,7 @@ questions = [
 
 total_questions= len(questions)
 attempt = 0
+best_score = 0
 
 while True:
 
@@ -86,7 +87,10 @@ while True:
                 print("Please enter a number.")        
              
 
-    print("Quiz Complete!")        
+    print("Quiz Complete!") 
+
+    if score > best_score:
+        best_score = score       
     
     percentage = (score / total_questions * 100)
     if percentage >= 80:
@@ -102,6 +106,7 @@ while True:
     print(f"Correct Answers: {correct_answers}")
     print(f"Wrong Answers: {wrong_answers}")
     print(f"Percentage: {percentage:.0f}%")
+    print(f"Best Score: {best_score}/{total_questions}")
 
     while True:
         choose = input("continue? (yes/no):").lower()
