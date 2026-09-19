@@ -6,31 +6,36 @@ questions = [
              "options" : ["Programming language", "Markup language", "Database", "Operating system"] ,
              "answer"  : "Programming language",
              "explanation": "Python ek high-level programming language hai.",
-             "difficulty": "Easy"},
+             "difficulty": "Easy",
+              "Category"  : "Python"},
 
             {"question" : "Python me function banane ke liye kaunsa keyword use hota hai?",
              "options" : ["func", "def", "function", "define"],
              "answer"  : "def",
              "explanation": "Python me function define karne ke liye def keyword use hota hai.",
-             "difficulty": "Easy"},
+             "difficulty": "Easy",
+              "Category"  : "Programming"},
 
              {"question" : "Python me list kaunse brackets me banti hai?",
               "options" : ["()", "{}", "[]", "<>"],
               "answer"  : "[]",
               "explanation": "Python me list square brackets [] ke andar banayi jati hai.",
-              "difficulty": "Easy"},
+              "difficulty": "Easy",
+               "Category"  : "Programming"},
 
              {"question" : "10 + 5 kitna hota hai?",
               "options" : ["20", "10", "25", "15"],
               "answer"  : "15",
               "explanation": "10 me 5 add karne par result 15 hota hai.",
-              "difficulty": "Easy"},
+              "difficulty": "Easy",
+              "Category"  : "Mathmatics" },
 
              {"question" : "Computer me RAM ka full form kya hai?",
               "options" : ["Random Access Memory", "Read Access Memory","Rapid Access Machine", "Random Application Memory"],
               "answer"  : "Random Access Memory",
               "explanation": "RAM ka full form Random Access Memory hai. Ye computer ki temporary memory hoti hai.",
-              "difficulty": "Easy"}
+              "difficulty": "Easy",
+               "Category" : "Computer Basic"}
 ]
 
 total_questions= len(questions)
@@ -52,6 +57,7 @@ while True:
         
         print(f"\nQuestion {number}/{total_questions}")
         print("difficulty:", quiz["difficulty"])
+        print("Category:", quiz["Category"])
         print(quiz["question"])
         
         random.shuffle(quiz["options"])
