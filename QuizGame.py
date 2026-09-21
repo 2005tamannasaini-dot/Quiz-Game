@@ -42,6 +42,28 @@ total_questions= len(questions)
 attempt = 0
 best_score = 0
 
+
+categories = ["Python", "Programming", "Computer", "Math"]
+
+print("\n===== Quiz Categories =====")
+
+for index, category in enumerate(categories, start=1):
+    print(f"{index}. {category}")
+
+while True:
+    try: 
+        category_choice = int (input("choose a category: "))
+
+        if 1 <= category_choice <= len(categories):
+            selected_category = categories[category_choice - 1]
+            print(f"\nSelected Category: {selected_category}")
+            break
+        else:
+            print("Please choose a valid category.")
+
+    except ValueError:
+        print("Please enter a number.")
+                
 while True:
 
     attempt += 1
