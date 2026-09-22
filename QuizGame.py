@@ -28,14 +28,14 @@ questions = [
               "answer"  : "15",
               "explanation": "10 me 5 add karne par result 15 hota hai.",
               "difficulty": "Easy",
-              "Category"  : "Mathmatics" },
+              "Category"  : "Math" },
 
              {"question" : "Computer me RAM ka full form kya hai?",
               "options" : ["Random Access Memory", "Read Access Memory","Rapid Access Machine", "Random Application Memory"],
               "answer"  : "Random Access Memory",
               "explanation": "RAM ka full form Random Access Memory hai. Ye computer ki temporary memory hoti hai.",
               "difficulty": "Easy",
-               "Category" : "Computer Basic"}
+               "Category" : "Computer"}
 ]
 
 total_questions= len(questions)
@@ -57,6 +57,14 @@ while True:
         if 1 <= category_choice <= len(categories):
             selected_category = categories[category_choice - 1]
             print(f"\nSelected Category: {selected_category}")
+
+            filtered_questions = [
+                quiz for quiz in questions
+                if quiz["Category"] == selected_category 
+            ]
+
+            total_questions = len(filtered_questions)
+
             break
         else:
             print("Please choose a valid category.")
@@ -73,9 +81,9 @@ while True:
 
     print(f"\n===== Attempt Quiz {attempt} =====")
 
-    random.shuffle(questions)
+    random.shuffle(filtered_questions)
 
-    for number, quiz in enumerate(questions, start=1):
+    for number, quiz in enumerate(filtered_questions, start=1):
         
         print(f"\nQuestion {number}/{total_questions}")
         print("difficulty:", quiz["difficulty"])
