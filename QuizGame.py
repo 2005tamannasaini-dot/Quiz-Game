@@ -43,7 +43,7 @@ attempt = 0
 best_score = 0
 
 
-categories = ["Python", "Programming", "Computer", "Math"]
+categories = ["Python", "Programming", "Computer", "Math", "Science"]
 
 print("\n===== Quiz Categories =====")
 
@@ -65,7 +65,10 @@ while True:
 
             total_questions = len(filtered_questions)
 
-            break
+            if total_questions == 0:
+                print("No questions available in this category.")
+            else:
+                break
         else:
             print("Please choose a valid category.")
 
