@@ -141,6 +141,7 @@ while True:
    
     print("\n===== Score Summary =====")
     print(f"Attempt Number: {attempt}")
+    print(f"Category: {selected_category}")
     print(f"Score: {score}/{total_questions}")
     print(f"Correct Answers: {correct_answers}")
     print(f"Wrong Answers: {wrong_answers}")
