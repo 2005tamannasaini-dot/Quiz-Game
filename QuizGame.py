@@ -81,6 +81,7 @@ while True:
     score = 0
     correct_answers = 0
     wrong_answers = 0
+    questions_attempted = 0
 
     print(f"\n===== Attempt Quiz {attempt} =====")
 
@@ -111,12 +112,14 @@ while True:
                         print("Explanation:", quiz["explanation"])
                         score += 1
                         correct_answers += 1
+                        questions_attempted += 1
 
                     else:
                         print(" Your Answer is wrong. ❌")    
                         print("Correct Answer:",quiz["answer"])
                         print("Explanation:", quiz["explanation"])
                         wrong_answers += 1
+                        questions_attempted += 1
                     break
 
                 else:
@@ -143,6 +146,7 @@ while True:
     print(f"Attempt Number: {attempt}")
     print(f"Category: {selected_category}")
     print(f"Score: {score}/{total_questions}")
+    print(f"Questions Attempted: {questions_attempted}")
     print(f"Correct Answers: {correct_answers}")
     print(f"Wrong Answers: {wrong_answers}")
     print(f"Percentage: {percentage:.0f}%")
