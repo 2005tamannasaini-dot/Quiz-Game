@@ -141,6 +141,8 @@ while True:
         print("Good job! 👍")
     else:
         print("Keep practicing! 💪")
+
+    unanswered_questions = total_questions - questions_attempted   
    
     print("\n===== Score Summary =====")
     print(f"Attempt Number: {attempt}")
@@ -149,6 +151,7 @@ while True:
     print(f"Questions Attempted: {questions_attempted}")
     print(f"Correct Answers: {correct_answers}")
     print(f"Wrong Answers: {wrong_answers}")
+    print(f"Unanswered Questions: {unanswered_questions}")
     print(f"Percentage: {percentage:.0f}%")
     print(f"Best Score: {best_score}/{total_questions}")
 
