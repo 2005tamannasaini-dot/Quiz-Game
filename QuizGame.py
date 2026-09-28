@@ -197,12 +197,12 @@ while True:
             selected_category = categories[category_choice - 1]
             print(f"\nSelected Category: {selected_category}")
 
-            filtered_questions = [
+            category_questions = [
                 quiz for quiz in questions
                 if quiz["Category"] == selected_category 
             ]
 
-            total_questions = len(filtered_questions)
+            total_questions = len(category_questions)
 
             if total_questions == 0:
                 print("No questions available in this category.")
@@ -213,7 +213,39 @@ while True:
 
     except ValueError:
         print("Please enter a number.")
-                
+
+difficulties = ["Easy", "Medium", "Hard"]        
+
+print("\n===== Quiz Difficulty =====")
+
+for index, difficulty in enumerate(difficulties, start=1):
+    print(f"{index}. {difficulty}")
+
+while True:
+    try:
+        difficulty_choice = int(input("Choose difficulty: ")) 
+
+        if 1 <= difficulty_choice <= len(difficulties):
+            selected_difficulty = difficulties[difficulty_choice - 1]   
+            print(f"\nSelected Difficulty: {selected_difficulty}")
+
+            filtered_questions = [
+                quiz for quiz in category_questions
+                if quiz["difficulty"] == selected_difficulty
+            ]        
+
+            total_questions = len(filtered_questions)
+
+            if total_questions == 0:
+                print("NO questions available for this difficulty.")
+            else:
+                break
+
+        else:
+            print("Please choose a valid difficulty.")
+
+    except ValueError:
+        print("Please enter a number.")             
 while True:
 
     attempt += 1
